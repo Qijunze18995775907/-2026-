@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>质量检查整改回复模块 · 变更对照表（2026-11-05）</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:26px 30px 60px;background:#f4f6f9;color:#1c2733;
+ font-family:"Microsoft YaHei","PingFang SC","SimSun",system-ui,sans-serif;font-size:13px;line-height:1.6}
+.wrap{max-width:1300px;margin:0 auto}
+h1{font-size:20px;margin:0 0 4px}
+.sub{color:#66727f;font-size:12.5px;margin-bottom:18px}
+h2{font-size:15px;margin:26px 0 10px;padding-left:9px;border-left:3px solid #0f4c81}
+.card{background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:16px}
+.kpi{background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 13px}
+.kpi .k{font-size:11.5px;color:#66727f}
+.kpi .v{font-size:19px;font-weight:700;margin-top:2px}
+.kpi .v small{font-size:11.5px;font-weight:400;color:#66727f;margin-left:2px}
+.kpi .d{font-size:11px;color:#8a95a1;margin-top:3px}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e3e8ee;border-radius:8px;overflow:hidden;font-size:12.3px}
+th,td{border-bottom:1px solid #eef1f5;padding:8px 10px;vertical-align:top;text-align:left}
+th{background:#f7f9fb;font-weight:700;font-size:12px;color:#33414f;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.c{text-align:center;white-space:nowrap}
+.src{color:#3d4b59;font-size:12px;background:#fbfcfd}
+.fld{font-family:Consolas,Menlo,monospace;font-size:11.5px;color:#0f4c81}
+.tg{display:inline-block;padding:1px 7px;border-radius:9px;font-size:11px;white-space:nowrap}
+.tg.red{background:#fdecea;color:#b3261e}
+.tg.amber{background:#fdf3e0;color:#8a5a00}
+.tg.green{background:#e8f5ec;color:#1f6b3a}
+.flow{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 2px}
+.st{flex:1;min-width:118px;background:#f7f9fb;border:1px solid #e3e8ee;border-radius:7px;padding:8px 10px}
+.st .n{font-size:15px;font-weight:700;margin-top:2px}
+.st .t{font-size:11.5px;color:#66727f}
+.arrow{align-self:center;color:#9aa5b1;font-size:15px;padding:0 2px}
+.note{background:#fbfcfd;border:1px dashed #d7dee6;border-radius:7px;padding:10px 12px;font-size:12px;color:#4a5764}
+ul{margin:6px 0 0 18px;padding:0}li{margin:3px 0}
+code{background:#eef2f6;padding:1px 5px;border-radius:4px;font-size:11.5px}
+.foot{margin-top:22px;color:#8a95a1;font-size:11.5px}
+</style></head><body><div class="wrap">
+
+<h1>质量检查整改回复模块 · 变更对照表</h1>
+<div class="sub">依据文件：《2026上半年公司质量检查整改回复.docx》《罗田县生态恢复项目项目整改 回复单01.doc》《质量整改回复单260922(1).docx》　·　不含空模板《质量检查整改回复台账.xlsx》
+ ·　工作台 v2.1　·　2026-11-05 17:57</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="k">变更点</div><div class="v">15</div><div class="d">字段 11 · 流程 2 · 界面 2</div></div>
+  <div class="kpi"><div class="k">校验规则</div><div class="v">14</div><div class="d">硬拦截 13 · 软提示 1</div></div>
+  <div class="kpi"><div class="k">整改状态</div><div class="v">3<small>→</small>5</div><div class="d">旧三值零迁移</div></div>
+  <div class="kpi"><div class="k">自动化断言</div><div class="v">124</div><div class="d">57 新增 + 67 既有，全过</div></div>
+  <div class="kpi"><div class="k">文件巡检</div><div class="v">259</div><div class="d">解析 ok 82 · 建议 198 条</div></div>
+</div>
+
+<h2>一、状态流转（业务主线）</h2>
+<div class="card">
+<div class="flow">
+  <div class="st"><div class="t">通知单下发</div><div class="n">待整改</div></div>
+  <div class="arrow">→</div>
+  <div class="st"><div class="t">现场整改</div><div class="n">整改中</div></div>
+  <div class="arrow">→</div>
+  <div class="st"><div class="t">报送回复单</div><div class="n">已回复待复核</div></div>
+  <div class="arrow">→</div>
+  <div class="st"><div class="t">复核通过</div><div class="n">已闭环</div></div>
+  <div class="arrow">↘</div>
+  <div class="st"><div class="t">复核不通过</div><div class="n">复核退回</div></div>
+</div>
+<div class="note" style="margin-top:10px">「复核退回」回到「整改中」；不允许跨级跳转（如待整改直接到已闭环），由校验 R6 拦截。
+旧数据只写「待整改 / 整改中 / 已闭环」，三者在新区间内仍合法，历史行无需迁移。</div>
+</div>
+
+<h2>二、变更点 · 文件依据 · 影响范围 · 兼容与校验结论</h2>
+<table>
+<thead><tr><th style="width:6%">编号</th><th style="width:19%">变更点</th><th style="width:27%">文件依据（原文摘录）</th><th style="width:20%">影响范围</th><th>兼容与校验处理结论</th></tr></thead>
+<tbody>
+<tr><td class="c"><b>C1</b></td><td>检查单新增「单据类型」kind（质量问题整改通知单 / 质量检查记录表）</td><td class="src">公司整改回复.docx：「接收到检查组下发的《质量检查记录表》/《质量问题整改通知单》」；宜昌回复单标题「质量整改回复单」</td><td>列表首列副标题、编辑表单、打印抬头「单据类型」、列表筛选器</td><td>旧行无此字段 → 归一化为「质量问题整改通知单」；导入时文本含「记录表」判为记录表，否则判为通知单</td></tr>
+<tr><td class="c"><b>C2</b></td><td>检查单新增「致送对象」toOrg</td><td class="src">公司整改回复.docx 抬头：「致：  队技术质量科」</td><td>编辑表单、打印抬头、文件导入抽取</td><td>抽取值若命中下一个标签（验收/复核/接收…）或为日期则不写入，避免把「验收人」当成致送对象</td></tr>
+<tr><td class="c"><b>C3</b></td><td>检查单新增「整改单位」fixUnit</td><td class="src">宜昌回复单 260922.docx 表头：「项目名称 / 整改单位　湖北中大」</td><td>编辑表单、打印抬头</td><td>默认留空；历史行不强行填值，仅设为「项目部」占位</td></tr>
+<tr><td class="c"><b>C4</b></td><td>检查单新增「下发日期 / 接收日期 / 限期整改时间」sendDate·recvDate·deadline</td><td class="src">宜昌回复单：「限期整改时间：　年　月　日　接收人签字：」；罗田回复单01.doc：「整改记录…2026年7月19日」</td><td>编辑表单、列表「限期整改」列（逾期标红+逾期天数）、打印抬头</td><td>校验 R3 检查日期 ≤ 限期整改；R4 接收人与接收日期成对；旧行无值时不参与逾期统计</td></tr>
+<tr><td class="c"><b>C5</b></td><td>检查单新增「整改责任人 / 整改报告时间」fixOwner·reportDate</td><td class="src">公司整改回复.docx：「问题整改责任人（签字）：」「报告时间：2026.7.30」；罗田回复单：「整改人：… 2026年7月19日」</td><td>编辑表单、打印抬头、打印签字栏</td><td>校验 R2 下发日期 ≤ 整改报告时间；签字栏留空时抽取函数不臆造人名</td></tr>
+<tr><td class="c"><b>C6</b></td><td>检查单新增「复核结论」verifyResult（待复核/已按要求整改/部分整改/整改不到位）</td><td class="src">罗田回复单：「复核记录：已按照要求进行整改」「复核人：」；宜昌回复单：「整改验证：责任人：」</td><td>编辑表单、打印「三、复核验证」段、闭环前置校验、文件导入抽取</td><td>校验 R8：结论为「待复核」或缺省时禁止置「已闭环」；结论为「整改不到位」时禁止闭环</td></tr>
+<tr><td class="c"><b>C7</b></td><td>检查单新增「整改佐证」photos</td><td class="src">公司整改回复.docx：「（三）整改前后对比图片：问题1…整改后：」；宜昌回复单：每条问题后「附整改照片：」</td><td>编辑表单、打印「整改佐证」栏、文件导入抽取</td><td>文本含「整改前后/对比图片/附整改」时记为「附整改前后对比照片」，否则不填</td></tr>
+<tr><td class="c"><b>C8</b></td><td>整改状态由 3 值扩为 5 值：新增「已回复待复核」「复核退回」</td><td class="src">三份单据的共同流转：通知单下发 → 限期整改 → 报送回复单（罗田「整改记录」、公司「整改情况」）→ 复核验证（「复核记录」「整改验证」）→ 闭环</td><td>列表状态列配色与角标、整改页 KPI 与流转卡、总仪表盘健康度与流转分布、打印件、列表筛选、导入状态归一化</td><td>旧值（待整改/整改中/已闭环）全部保留在状态集合内，历史行零迁移；旧行标记为「兼容值」；非法跳转由校验 R6 拦截</td></tr>
+<tr><td class="c"><b>C9</b></td><td>检查问题新增「问题序号」seq</td><td class="src">宜昌回复单：「问题一：… 问题七：」；公司整改回复：「（一）存在的问题 1—4」</td><td>问题列表首列副标题、打印「二、整改情况」序号列</td><td>旧行按所属检查内顺序自动补「问题一/二/…」，只填空值</td></tr>
+<tr><td class="c"><b>C10</b></td><td>检查问题新增「整改佐证照片」photo（未附/附整改照片/附整改前后对比照片）</td><td class="src">宜昌回复单：每条问题后「附整改照片：」</td><td>问题列表「整改佐证」列（未附标红）、编辑表单、问题级闭环校验</td><td>校验 R13：置「已闭环」必须已附佐证，否则拦截；旧行按状态补默认值</td></tr>
+<tr><td class="c"><b>C11</b></td><td>问题字段对齐单据用语：「整改要求」→「整改内容及要求」，「责任人」→「整改责任人」</td><td class="src">宜昌回复单表头：「整改内容及要求」「整改措施」「整改验证」</td><td>编辑表单标签、字段中文名（导入预览）、打印「二、整改情况」列</td><td>仅改显示标签，字段键 requirement / owner 不变，既有数据与导入映射不受影响</td></tr>
+<tr><td class="c"><b>C12</b></td><td>整改页新增「整改状态流转」五段分布卡</td><td class="src">由 C8 的状态机派生，用于定位积压环节</td><td>整改页首屏、状态计数与进度条</td><td>计数按问题项统计；状态为零时进度条为空白轨道，不误显示为满格</td></tr>
+<tr><td class="c"><b>C13</b></td><td>整改页 KPI 由 4 个改为 5 个：新增「待复核」，超期口径改按「限期整改时间」</td><td class="src">罗田/宜昌回复单的复核环节 + 宜昌「限期整改时间」</td><td>整改页顶部、闭环率口径</td><td>闭环率 = 已闭环 ÷ 问题总数；未闭环含待整改/整改中/已回复待复核/复核退回</td></tr>
+<tr><td class="c"><b>C14</b></td><td>打印件重排为《质量问题整改回复单》：一、存在的问题 / 二、整改情况 / 三、复核验证 + 三方签字</td><td class="src">版式取自三份单据：抬头六行（项目名称·整改单位 / 检查编号·单据类型 / 致送对象·检查人 / 检查日期·下发日期 / 接收人·接收日期 / 限期整改时间·整改报告时间），底部「问题整改责任人（签字）·验收人（签字）·报告时间」</td><td>打印输出（单条检查单）</td><td>旧记录打印自动补默认值（致送对象「队技术质量科」等）；缺失字段显示空白而非 undefined</td></tr>
+<tr><td class="c"><b>C15</b></td><td>总仪表盘同步：在建项目 KPI 改「整改闭环 x% · 待复核 n · 超期 n」；台账健康度补未闭环/待复核/超期；新增「整改流转」五态分布</td><td class="src">与 C8 状态机同源；口径见整改页 KPI</td><td>总览仪表盘首屏 KPI、台账健康度卡片</td><td>仪表盘与整改页共用 core.js 的同一套判定函数，口径不会分叉；空数据时为 0 不报错</td></tr>
+</tbody></table>
+
+<h2>三、校验规则清单</h2>
+<table>
+<thead><tr><th style="width:7%">编号</th><th style="width:30%">规则</th><th>依据</th><th style="width:10%">类型</th></tr></thead>
+<tbody>
+<tr><td class="c"><b>R1</b></td><td>检查人必填</td><td>三份单据均由检查人签署，缺失则整单不可追溯</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R2</b></td><td>下发日期 ≤ 整改报告时间</td><td>回复单不可能早于通知单下发</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R3</b></td><td>检查日期 ≤ 限期整改时间</td><td>限期不可能早于检查当日</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R4</b></td><td>接收人与接收日期成对</td><td>回复单「接收人签字」需成对留存</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R5</b></td><td>已整改数 ≤ 指出问题数</td><td>数量逻辑自洽</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R6</b></td><td>状态只能逐级流转：待整改→整改中→已回复待复核→已闭环（可退回复核退回→整改中）</td><td>禁止跨级跳转，保证流转留痕</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R7</b></td><td>置为「已回复待复核」「已闭环」必须有整改报告时间</td><td>回复单报送日期是复核依据</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R8</b></td><td>置为「已闭环」必须已填复核结论与复核日期，且已整改数 = 指出问题数</td><td>闭环三要素齐全才能算验证通过</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R9</b></td><td>复核结论为「整改不到位」时不得闭环</td><td>验证不通过必须退回整改</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R10</b></td><td>超过限期整改时间仍未闭环 → 提示督办</td><td>不阻断保存，只提醒</td><td class="c"><span class="tg amber">软提示</span></td></tr>
+<tr><td class="c"><b>R11</b></td><td>问题置「已闭环」必须有整改措施</td><td>回复单「整改情况」不可空</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R12</b></td><td>问题置「已闭环」必须有整改完成日期</td><td>对应「整改人 + 日期」</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R13</b></td><td>问题置「已闭环」必须已附整改佐证照片</td><td>对应「附整改照片」</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+<tr><td class="c"><b>R14</b></td><td>问题状态逐级流转</td><td>与单据状态机一致</td><td class="c"><span class="tg red">硬拦截</span></td></tr>
+</tbody></table>
+<div class="note" style="margin-top:10px">校验在写入台账之前执行（core.js <code>editRow</code> 中 <code>beforeSave</code> 前移），
+不通过时整条不落库、弹窗保持打开，避免出现「界面报错但数据已改」的中间态。</div>
+
+<h2>四、三份依据文件的实际抽取结果</h2>
+<table>
+<thead><tr><th style="width:26%">文件</th><th style="width:12%">格式</th><th style="width:26%">抽取到的字段</th><th>结论</th></tr></thead>
+<tbody>
+<tr><td>2026上半年公司质量检查整改回复.docx</td><td class="c">docx</td><td class="fld">no, content, date, toOrg, reportDate, kind, photos, issueCount</td><td>致送「队技术质量科」、检查日期 2026-07-27、问题 4 条、报告时间 2026-07-30 全部命中；责任人/验收人签字栏为空 → 不臆造</td></tr>
+<tr><td>罗田县生态恢复项目项目整改 回复单01.doc</td><td class="c">doc（OLE/Word97）</td><td class="fld">no, content, date, verifyResult</td><td>复核记录「已按照要求进行整改」→ 复核结论；整改人签字栏为空 → 只取到日期，不写入人名</td></tr>
+<tr><td>质量整改回复单260922(1).docx</td><td class="c">docx</td><td class="fld">no, content, photos, issueCount</td><td>问题一—问题七 → 问题数 7；「附整改照片」→ 整改佐证；表格内签字栏为空白模板 → 不写入</td></tr>
+</tbody></table>
+<div class="note" style="margin-top:10px">抽取采用「有则填、无则空」策略：签字栏留空、模板未填时一律不写入，
+宁可留给人工补录，也不把「验收人」「2026年7月19日」这类相邻文本误当成人名。
+空模板《质量检查整改回复台账.xlsx》按用户要求排除，不作为依据。</div>
+
+<h2>五、验证结论</h2>
+<div class="card">
+<ul>
+<li><b>模块级探针 57 项全过</b>：状态机 6 项、字段与兼容 7 项、页面渲染 13 项、校验规则 15 项、界面级落库 7 项、打印件 7 项、仪表盘口径 2 项。</li>
+<li><b>既有探针回归 67 项全过</b>（25 + 27 + 15），解析与导入链路未受影响。</li>
+<li><b>真实台账巡检 259 个文件</b>：解析成功 82、待补录 56、无需解析 113、跳过 6、失败 2（.lnk 快捷方式与 1 个损坏 docx），与 v2.0 完全一致。</li>
+<li><b>建议条数 198 条 / 85 文件</b>，其中检查模块 3 条，抽取字段见第四节。</li>
+<li><b>仪表盘口径一致</b>：整改页与总览仪表盘共用 core.js 的同一套状态判定，闭环率 85.7%（12/14）、未闭环 2 个、待复核 1 个，两处数值一致。</li>
+<li><b>打印件双向核对</b>：实际渲染《质量问题整改回复单》，抬头 12 项字段无空单元格、三段式正文齐全、三方签字栏完整。</li>
+</ul>
+</div>
+
+<div class="foot">生成时间 2026-11-05 17:57　·　工作台版本 v2.1　·　文件：质量管理台账工作台.html（519.9 KB）</div>
+</div></body></html>
