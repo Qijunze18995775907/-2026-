@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>2026年公司质量管理台账 · 工作台</title>
+<style>
+@@STYLE@@
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <h1>质量管理台账工作台</h1>
+      <p>2026 年度 · 湖北省中大公司</p>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot">
+      数据本地保存 · <b>v2.5</b>
+    </div>
+  </aside>
+  <div class="nav-scrim" id="scrim"></div>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="btn menu-btn" id="menuBtn" aria-label="打开菜单">☰</button>
+      <div style="min-width:0">
+        <h2 id="pageTitle">总览仪表盘</h2>
+        <div class="sub" id="pageSub"></div>
+      </div>
+      <div class="spacer"></div>
+      <button class="btn" id="btnReport" title="按本月数据生成可打印月报">生成月报</button>
+      <button class="btn" id="btnAllCSV" title="导出全部 15 类台账">全量导出</button>
+      <button class="btn primary" id="btnQuickAdd">+ 新增任务</button>
+    </header>
+    <main class="content" id="content"></main>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script>
+@@SEED@@
+</script>
+<script>
+@@INSPDATA@@
+</script>
+<script>
+@@CORE@@
+</script>
+<script>
+@@PARSE@@
+</script>
+<script>
+@@PLAN@@
+</script>
+<script>
+@@INBOX@@
+</script>
+<script>
+@@MODULES@@
+</script>
+<script>
+@@FILES@@
+</script>
+<script>
+@@INSPATTACH@@
+</script>
+<script>
+@@REVIEWATTACH@@
+</script>
+<script>
+@@SPACE@@
+</script>
+<script>
+@@QDIR@@
+</script>
+<script>
+@@IMGVIEW@@
+</script>
+<script>
+@@FOLDER@@
+</script>
+<script>
+@@DOCGEN@@
+</script>
+<script>
+@@XLSXOUT@@
+</script>
+<script>
+@@IMPORT@@
+</script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var r=document.getElementById("btnReport");
+  if(r) r.onclick=function(){ window.printMonthlyReport(); };
+  var c=document.getElementById("btnAllCSV");
+  if(c) c.onclick=function(){ window.exportAllCSV(); };
+  var q=document.getElementById("btnQuickAdd");
+  if(q) q.onclick=function(){ if(window.taskForm) window.taskForm(null); };
+  var v=document.getElementById("ver");
+  if(v) v.textContent="v2.5 · "+new Date().toLocaleDateString("zh-CN");
+});
+</script>
+</body>
+</html>
