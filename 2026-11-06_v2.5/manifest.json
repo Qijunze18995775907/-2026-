@@ -1,0 +1,223 @@
+{
+  "archive": "v2.5 施工方案内审记录附件 · 独立成果快照",
+  "scope": "仅 v2.5（不含 v2.4 及更早迭代；过程记录见 .workbuddy/memory/2026-11-06.md）",
+  "version": "v2.5",
+  "date": "2026-11-06",
+  "files": 29,
+  "bytes": 1743477,
+  "verification": {
+    "probe30": "PASS=116 FAIL=0",
+    "all_regression": "10 套 / 453 项断言全过"
+  },
+  "items": [
+    {
+      "path": "质量管理台账工作台.html",
+      "bytes": 624387,
+      "sha256": "0b7c445a94d1146763c9f6ba4a932fcb6c334fe3392e0e7c0d73b49b97725607",
+      "desc": "最终交付物 · 单文件工作台 v2.5",
+      "verified": true
+    },
+    {
+      "path": "build.py",
+      "bytes": 1591,
+      "sha256": "e952161c2985501297b7dfe3037e5b64a81abc1b332f9d60f2f52f22f1925f06",
+      "desc": "构建脚本 · 按 @@XXX@@ 占位符拼接 src 分片",
+      "verified": true
+    },
+    {
+      "path": "src/core.js",
+      "bytes": 34521,
+      "sha256": "ed3a2b658152feb0dc855b0ebce67fed423e2885eb09028c86e0c2bf1aae8d42",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/docgen.js",
+      "bytes": 15690,
+      "sha256": "3204b702db45bc77834e5f8aef4f13e367b371cc7f096ef00748bbc08909047a",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/files.js",
+      "bytes": 23741,
+      "sha256": "cc0aebdb1ed06b6de6c9449a0d87d9992907f61ec1a56af5e29838cfc1bcd3ef",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/folder.js",
+      "bytes": 39203,
+      "sha256": "675e002236458a20e66bd3bfb47ad2f1d30e0180208c677c2d014514a945b81e",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/imgview.js",
+      "bytes": 7403,
+      "sha256": "b6b8a20d0d963643837402fb83ebb3de9c071901ff26626509110dd7c3332214",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/importer.js",
+      "bytes": 78272,
+      "sha256": "1b9a8f23a509f77323d51d27dd5dda3b7adffee5bee0163d4d1b7c0df3b79b28",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/inbox.js",
+      "bytes": 33179,
+      "sha256": "4a68ebb376b021acb410744cb1f0f715268e5b6d09723d2af98360f05b802da4",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/inspattach.js",
+      "bytes": 21771,
+      "sha256": "98019af37ce6fd77c89d8f07785161bd54eec9eef251978d4a26a175d65ba80a",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/inspectdata.js",
+      "bytes": 14251,
+      "sha256": "fb1c5b50ef91a2588a54134043a065eee2785862f8f953bb218c73bbf9a8c998",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/modules.js",
+      "bytes": 64649,
+      "sha256": "816bbc73478edf4adca893b9f026501af486b54f8a10decae543d5510223ae82",
+      "desc": "源码分片（本次新增/修改：reviewattach.js / modules.js / style.css / template.html）",
+      "verified": true
+    },
+    {
+      "path": "src/parse.js",
+      "bytes": 37661,
+      "sha256": "38f348260b28ab30a3f2b0c8a13128295bee50d7c8302a277164cb5e05f8461d",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/plan.js",
+      "bytes": 35354,
+      "sha256": "4e35317d108ca162d6ceed53a1c60feabadf62874f41048f6b60318060c8d61a",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/qdirs.js",
+      "bytes": 35472,
+      "sha256": "380e97b07f134e54a185c603ca6e675633056770468564a9e70c8819ccb460f7",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/reviewattach.js",
+      "bytes": 29219,
+      "sha256": "2104d859f2d88c76ff46e62ca24f89653057298513a3c5d952e23e9be2e6a686",
+      "desc": "源码分片（本次新增/修改：reviewattach.js / modules.js / style.css / template.html）",
+      "verified": true
+    },
+    {
+      "path": "src/seed.js",
+      "bytes": 38108,
+      "sha256": "9e5986fa28cad9bc403db3fc57e26512d01db5a4f9ac378bc324451b25f71ab8",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 39891,
+      "sha256": "3f82004453cb68f77e084716d1251b0f789e7b1ce0d0502b6a3186af1e712c51",
+      "desc": "源码分片（本次新增/修改：reviewattach.js / modules.js / style.css / template.html）",
+      "verified": true
+    },
+    {
+      "path": "src/template.html",
+      "bytes": 2422,
+      "sha256": "37ad205a375243882fa39d99757ccc908e9c6d9bc527ad78b26937d15c78a02b",
+      "desc": "源码分片（本次新增/修改：reviewattach.js / modules.js / style.css / template.html）",
+      "verified": true
+    },
+    {
+      "path": "src/workspace.js",
+      "bytes": 48284,
+      "sha256": "166b89926db3b9e3af8c857a233017ef3c6deb833d053da0496b03e75a1ed52a",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "src/xlsxout.js",
+      "bytes": 23328,
+      "sha256": "8c92839a7819f195ef1a832987745e185f7a027c0bd14403d81816a127eb2e33",
+      "desc": "源码分片",
+      "verified": true
+    },
+    {
+      "path": "tools/review_attach_md.py",
+      "bytes": 5696,
+      "sha256": "f14aeb36a83c7e956668a1f8e0ee92b8a2eff0ef70f787feb029de0f5ca34246",
+      "desc": "markitdown 离线转换脚本 · 扫描件转 .md",
+      "verified": true
+    },
+    {
+      "path": "_tmp/probe30.js",
+      "bytes": 21231,
+      "sha256": "f36cb534966ff105344f92f01981999a9f7583ffa249bc22ba55c6c9b92dd90c",
+      "desc": "v2.5 功能探针 · 116 项断言",
+      "verified": true
+    },
+    {
+      "path": "_tmp/mkprobe30.py",
+      "bytes": 520,
+      "sha256": "43968cc3b31326193343475af3ded3f4d126129d9dd84ab1adfd5c69b6c628bb",
+      "desc": "probe30 注入/生成脚本",
+      "verified": true
+    },
+    {
+      "path": "_tmp/mkv25shot.py",
+      "bytes": 1973,
+      "sha256": "67c8d16a3d1492ff8665f41f48ccd325a93ed0b894b242886ed1f1b951e09a8f",
+      "desc": "v2.5 截图页生成脚本",
+      "verified": true
+    },
+    {
+      "path": "_tmp/shot_cdp.js",
+      "bytes": 3010,
+      "sha256": "4f9f9ad179ff35004d32f633ac1a0a806cd047470db05db3800a48f6b1d11737",
+      "desc": "CDP 截图工具",
+      "verified": true
+    },
+    {
+      "path": "_tmp/v25_modal.png",
+      "bytes": 220559,
+      "sha256": "c5939f9bafa72a047577bf37ac330732296a191b693a2c98f5def4707a1aec16",
+      "desc": "1440 视口 · 两栏弹窗",
+      "verified": true
+    },
+    {
+      "path": "_tmp/v25_table.png",
+      "bytes": 166571,
+      "sha256": "03e790b444dbfd50f9d8310873b2d900e6737bc33dd2b052cfb2c17af016d38f",
+      "desc": "1440 视口 · 方案名称列入口",
+      "verified": true
+    },
+    {
+      "path": "_tmp/v25_mobile.png",
+      "bytes": 75520,
+      "sha256": "6e38ba358185cfe6f4832c827e2a9bc7e351cc3a9057e57c00846a36686798b4",
+      "desc": "390 视口 · 移动端单列",
+      "verified": true
+    }
+  ],
+  "archive_document": {
+    "path": "施工方案内审附件成果存档_2026-11-06.html",
+    "bytes": 27911,
+    "sha256": "bb72b0c51509bbf13838036aed3155baad3755d687cc1e454e8ea0a0d7b67e0c",
+    "note": "根目录独立成果档案，不在快照目录内"
+  }
+}
